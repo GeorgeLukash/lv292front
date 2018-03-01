@@ -1,0 +1,29 @@
+<div class="components-container">
+    <h2>Slider</h2>
+    <div class="container-content">
+        <div class="slider-container">
+            <h3 class="img-name text-center">{{$ctrl.imageName}}</h3>
+            <slider images-data=$ctrl.data 
+                timeout=$ctrl.timeout 
+                get-name="$ctrl.imageName = name">
+            </slider>
+        </div>
+    
+        <pre>
+            <code>
+&lt;slider
+            
+    images-data="imagesArray" 
+
+    timeout="timeoutNumber"
+
+    get-name="imageName"&gt;
+
+&lt;/slider&gt;
+            </code>
+        </pre>
+    </div>
+    <div class="api-table">
+        <itable table-data="$ctrl.getData()" text-extended="false"></itable>
+    </div>
+</div>

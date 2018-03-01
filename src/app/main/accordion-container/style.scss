@@ -1,0 +1,30 @@
+accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 10px 30px 10px;
+  background-color: rgb(233, 233, 233);
+  width: 55%;
+  border-radius: 7px;
+}
+
+.description {
+  border: 1px solid black;
+  height: 40px;
+  width: 100%;
+  margin: 20px 40px;
+  align-self: center;
+}
+.accordion-sample {
+  max-height: 200px;
+}
+
+@media screen and (max-width: 767px) {
+  .up-container {
+    flex-direction: column;
+  }
+  accordion {
+    width: 100%;
+  }  
+}

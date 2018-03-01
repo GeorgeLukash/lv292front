@@ -1,0 +1,24 @@
+<div class="flex-container">
+    <div class = "input-container">
+        <div style="padding-bottom: 10px">HEX: 
+            <input type="text"
+                   ng-model="$ctrl.hex" 
+                   placeholder="Select Color" />
+        </div>
+        
+        <div>RGB:
+            <input type="text" 
+                   ng-model="$ctrl.rgb" 
+                   placeholder="Select Color" />
+        </div>
+    </div>
+    <div>
+        <button
+            ng-click="$ctrl.clearData()">Clear
+        </button>
+    </div>
+    
+    <div class="colerpalette"
+         ng-style="{'background-color': 'rgb('+$ctrl.rgb+')'}">
+    </div>
+</div>

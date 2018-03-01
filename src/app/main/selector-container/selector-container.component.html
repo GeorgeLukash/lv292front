@@ -1,0 +1,30 @@
+<div class="components-container">
+
+        <h2 class="headings">Selector Component</h2>
+    <div class="container-content">
+        <div>
+            <selector option-list=$ctrl.myCars
+                output="selectedOption = selection">
+                Choose a car
+            </selector>
+            <h3 class="headings">You selected: {{selectedOption.model}}</h3>
+            <h4 class="headings"><i> It's color is:  {{selectedOption.color}}</i></h4>
+        </div>
+        
+        <div> 
+            <h3>Example: </h3>
+            <pre>
+        
+        &lt;ita-selector
+
+            option-list = "dataArray"&gt;   
+               
+        &lt;/ita-selector&gt;
+               
+            </pre>
+        </div>
+    </div>
+    <div class="api-table">
+        <itable table-data="$ctrl.getData()" text-extended="false"></itable>
+    </div>
+</div>

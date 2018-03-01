@@ -1,0 +1,75 @@
+<div class="container theme-showcase">
+  <div>
+    <div class="col-lg-8">
+     <div ng-if="$ctrl.textExtended">
+      <div class="page-header">
+        <h2 id="tables">Table</h2>
+      </div>
+      <div class="bs-component">
+        <form class="form-inline">
+          <div class="form-group">
+            <label class="perPage">Search</label>
+            <input 
+              type="text" 
+              ng-model="$ctrl.search" 
+              class="form-control" 
+              placeholder="Search">
+          </div>
+        </form>
+      </div>
+        <div class="selectPerPageToShow">
+          View
+          <select 
+            name="select1" 
+            ng-model="viewby" 
+            ng-change="$ctrl.setItemsPerPage(viewby)" 
+            ng-init="$ctrl.setItemsPerPage(5)">
+            <option 
+              value="" 
+              selected>5</option>
+            <option>10</option>
+            <option value={{$ctrl.max}}>all</option>
+          </select> records.
+        </div>
+      </div>  
+        <table class="table-striped table-hover">
+          <thead>
+            <tr>
+              <th 
+                ng-repeat="item in $ctrl.tableRowHeaders" 
+                ng-click="$ctrl.sort(item)">
+                {{item}}
+                <span 
+                  class="glyphicon sort-icon" 
+                  ng-show="$ctrl.sortKey==item" 
+                  ng-class="{'glyphicon-chevron-up':$ctrl.reverse,'glyphicon-chevron-down':!$ctrl.reverse}"></span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in $ctrl.getItems() |orderBy:$ctrl.sortKey:$ctrl.reverse|filter:search">
+              <td ng-repeat="(key, value) in item">{{value}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div ng-if="$ctrl.textExtended">
+          <div class="pagination-div">
+            <ul class="pagination">
+              <li ng-class="$ctrl.disablePrevPage()">
+                <a href ng-click="$ctrl.prevPage()">« Prev</a>
+              </li>
+              <li 
+                ng-repeat="n in $ctrl.range()" 
+                ng-class="{active: n == $ctrl.currentPage}" 
+                ng-click="$ctrl.setPage(n)">
+                <a href="#">{{n}}</a>
+              </li>
+              <li ng-class="$ctrl.disableNextPage()">
+                <a href ng-click="$ctrl.nextPage()">Next »</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

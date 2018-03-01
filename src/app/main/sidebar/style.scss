@@ -1,0 +1,36 @@
+@import '../../../index';
+.container-sidebar {
+    height: 100vh;
+    background-color: $main-dark-grey-color;
+    text-align: center;
+}
+
+.menu-button-container {
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu-icon {
+    font-size: 2rem;
+}
+
+.list-item {
+    background-color: $main-dark-grey-color;
+    color: #fff;
+    position: relative;
+    display: block;
+    padding: 10px 30px;
+}
+
+.list-item {
+    &:hover,
+    &:focus {
+        background-color: lighten($main-dark-grey-color, 10);
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+sidebar-item {
+    font-size: 1.8rem;
+}

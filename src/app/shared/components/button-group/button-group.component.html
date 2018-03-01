@@ -1,0 +1,20 @@
+<div class="button-group">
+    <button ng-repeat="singleButton in $ctrl.tmpData"
+            ng-disabled=singleButton.disabled 
+            ng-click="$ctrl.getNameColor(singleButton)" 
+            class="button"
+            ng-class="{
+                'disabled-button':singleButton.disabled,
+                'click-button': singleButton.name == 'Click',
+                'warning-button': singleButton.name == 'Warning',
+                'secondary-button': singleButton.name == 'Secondary',
+                'danger-button': singleButton.name == 'Danger',
+                'success-button':singleButton.name == 'Success'
+            }"
+            >
+            {{singleButton.name}}
+    </button>
+</div>
+<div>
+    <h3>You clicked {{ $ctrl.count}} times!</h3>
+</div>

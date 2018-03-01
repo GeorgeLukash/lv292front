@@ -1,0 +1,60 @@
+<div class="components-container">
+  <h2>Date Picker</h2>
+    <div class="container-content">
+ 
+      <div class="dp-components">
+        
+        <p class="date-picker-examples">Classic:</p>
+        <date-picker 
+          output-select="selectedFromSingle = selectedDays">
+        </date-picker>
+        
+        <p class="date-picker-examples">With date format MM/DD/YYYY and icon:</p>
+        <date-picker  
+          date-format="MM/DD/YYYY"
+          open-button="icon">
+        </date-picker>
+      
+        <p class="date-picker-examples">With default selected date:</p>
+        <date-picker 
+          default-selected="$ctrl.selectedDef">
+        </date-picker>
+        
+        <p class="date-picker-examples">Range selection:</p>
+        <date-picker 
+          output-select="selectedRange = selectedDays"
+          open-button="icon"
+          selection="range">
+        </date-picker>
+
+
+        <div class="selected-date-output">
+
+          <p>Output with selected date to parent component:</p>
+          <p>
+            {{selectedFromSingle}} <br/>
+            {{selectedRange}}
+          </p>
+
+        </div>
+        
+      </div>
+
+      <code-preview>
+          <h3>Example: </h3>
+        <pre>
+          <code>           
+  &lt;ita-date-picker 
+    date-format="MM/DD/YYYY"
+    default-selected=Date
+    open-button="icon"
+    selection-mode="range"
+    output-select="selectedOutput=selectedDays"&gt;
+  &lt;/ita-date-picker&gt;</code></pre>
+      </code-preview>
+    </div>
+    
+    <div class="api-table">
+      <itable table-data="$ctrl.getData()" text-extended="false"></itable>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+.button{
+    margin: 0 0 5px 5px;
+    border: none; 
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+.disabled-button {
+    opacity: .65;
+}
+.click-button {
+    background-color: #007bff;
+    color: white;
+}
+.click-button:hover {
+    background-color: #003bff;
+    box-shadow: 0 8px 6px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.warning-button {
+    background-color: #ffc107;
+    color: #fff
+}
+.warning-button:hover {
+    background-color: #f4af41;
+    color: #fff;
+    box-shadow: 0 8px 6px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.secondary-button {
+    background-color: #6c757d;
+    opacity: 0.7;
+    color: #fff
+}
+.secondary-button:hover {
+    background-color: #6c757d;
+    opacity: 1;
+    box-shadow: 0 8px 6px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.danger-button {
+    background-color: #dc3545;
+    color: #fff;
+}
+.danger-button:hover {
+    background-color: #ec0018;
+    box-shadow: 0 8px 6px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.success-button {
+    background-color: #28a745;
+    color: white;
+}
+.success-button:hover {
+    background-color: #09be33;
+    box-shadow: 0 8px 6px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

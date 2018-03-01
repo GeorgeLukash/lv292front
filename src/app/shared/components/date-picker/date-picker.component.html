@@ -1,0 +1,31 @@
+<div class="date-selector-container">
+  
+  <date-picker-input
+    open-button="$ctrl.openButton" 
+    selection-mode="$ctrl.selectionMode" 
+    default-selected="$ctrl.defaultSelected"
+    default-date-format="$ctrl.defaultDateFormat"
+    show-dp="$ctrl.showDatePicker = $ctrl.showDatePickerBody()"
+    selected-date="$ctrl.selectedDate">
+  </date-picker-input>
+
+</div>
+
+<div 
+  class="date-picker" 
+  ng-show="$ctrl.showDatePicker">
+
+  <date-picker-header 
+    date="$ctrl.date" 
+    month-switch="$ctrl.daysArray = daysArray">
+  </date-picker-header>
+  
+  <date-picker-body 
+    date="$ctrl.date" 
+    selection-mode="$ctrl.selectionMode" 
+    default-selected="$ctrl.defaultSelected"
+    days-array="$ctrl.daysArray"
+    output-date="$ctrl.selectedDate = $ctrl.getOutput(selectedDate)" 
+    default-date-format="$ctrl.defaultDateFormat">
+  </date-picker-body>
+</div>

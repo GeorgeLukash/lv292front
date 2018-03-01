@@ -1,0 +1,18 @@
+<div class="month-switch">
+  <button 
+    class="month-button" 
+    ng-click="$ctrl.previousMonth()">
+    &#8249;
+  </button>
+  
+  <div>
+    <span ng-bind="$ctrl.formatMonthName('MMMM')"></span>
+    <span ng-bind="$ctrl.formatMonthName('YYYY')"></span>
+  </div> 
+
+  <button 
+    class="month-button" 
+    ng-click="$ctrl.nextMonth()">
+    &#8250;
+  </button>
+</div>

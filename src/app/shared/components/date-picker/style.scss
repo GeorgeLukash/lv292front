@@ -1,0 +1,14 @@
+@import 'color-variables';
+
+.date-picker {
+  width: 300px;
+  padding-bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  font-weight: bold;
+  position: absolute;
+  z-index: 999;
+  background: $grey-light;
+  border-radius: 10px 10px 5px 5px;
+}

@@ -1,0 +1,42 @@
+.date-picker-examples {
+  margin: 0px;
+}
+
+.api-description {
+  width: 600px;
+  display: flex;
+  align-self: center
+}
+
+code-preview {
+  width: 430px;
+  height: 200px;
+}
+
+.dp-components {
+  display: flex;
+  flex-direction: column;
+}
+
+date-picker {
+  margin-bottom: 20px;
+}
+
+.selected-date-output {
+  height: auto;
+  width: 600px;
+}
+
+@media screen and (max-width: 900px) {
+
+  .upper-container {
+    flex-direction: column;    
+    justify-content: space-between;
+    height: 500px;
+  }
+
+  .date-picker-container {
+    justify-content: center;
+  }
+  
+}

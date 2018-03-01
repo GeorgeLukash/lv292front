@@ -1,0 +1,11 @@
+<div class="list-item menu-button-container" 
+  ng-click="isShown=!isShown">
+    <span class="menu-icon">&#9776;</span>
+</div>
+
+<div ng-if="isShown">
+  <div ng-repeat="page in ::$ctrl.allPages">
+    <sidebar-item page="::page"></sidebar-item>
+  </div>
+
+</div>

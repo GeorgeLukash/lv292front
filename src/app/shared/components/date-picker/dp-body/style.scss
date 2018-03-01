@@ -1,0 +1,63 @@
+@import '../color-variables';
+
+.day-names-container {
+  display: flex;
+  flex-direction: row;
+  padding-left: 3px;
+  margin-top: 2px;
+
+  .day-names {
+    color: $white;
+    height: 40px;
+    width: 40px;
+    background-color: $green-light;
+    border: 1px solid $green-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1px;
+    border-radius: 5px;
+  }
+}
+
+.day-container {
+  display: flex;
+  flex-direction: row;
+  padding-left: 3px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+  
+  .day-item {
+    height: 40px;
+    width: 40px;
+    background-color: $yellow-light;
+    border: 1px solid $yellow-dark;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 1px;
+    border-radius: 5px;
+  }
+
+  .active-days:hover {
+    background-color: $blue-light;
+    border: 1px solid $blue-dark;
+  }
+
+  .empty-days {
+    opacity: 0;
+    cursor: default;
+  }
+
+  .today {
+    background-color: $red-light;
+    border: 1px solid $red-dark;
+  }
+
+
+  .selected-date {
+    background-color: $blue-light;
+    border: 1px solid $blue-dark;
+  }
+}

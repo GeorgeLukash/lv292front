@@ -1,0 +1,7 @@
+
+<label><i>Please make a choise: </i></label>
+<select class = 'selector'
+    ng-model="selectedItem"
+    ng-options="item.model for item in $ctrl.optionList" 
+    ng-change="$ctrl.selectedData(selectedItem)">
+</select>  

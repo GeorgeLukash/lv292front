@@ -1,0 +1,31 @@
+<div class="slider">
+        <div class="slide-content">
+            <span class="prev" 
+                  ng-click="$ctrl.previousSlide()">
+                  &#10094;
+            </span>
+    
+            <div class="one-slide">
+                <ul class="image-slider">
+                    <li class="slide" 
+                        ng-repeat="image in $ctrl.imagesData" 
+                        ng-class="{'show': $first}"
+                        ng-if="class == show">
+                        <img ng-src="{{image.url}}">
+                    </li>
+                </ul>
+            </div>
+    
+            <span class="next" 
+                  ng-click="$ctrl.nextSlide()">
+                  &#10095;
+            </span>
+        </div>
+    
+        <div class="autoplay" 
+             ng-if="$ctrl.timeout" 
+             ng-init="$ctrl.autoPlay($ctrl.timeout)">
+            <button ng-click="$ctrl.autoPlay($ctrl.timeout)">&#x25B6;</button>
+            <button ng-click="$ctrl.stopPlay()">&#9612;&#x2590;</button>
+        </div>
+    </div>

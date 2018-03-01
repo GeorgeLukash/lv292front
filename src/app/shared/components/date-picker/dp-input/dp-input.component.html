@@ -1,0 +1,64 @@
+<div 
+  ng-class="{
+    'single-select': $ctrl.selectionMode.singleSelect,
+    'range-select': $ctrl.selectionMode.rangeSelect
+  }">
+
+  <div
+    class="input-wrapper"
+    ng-if="$ctrl.selectionMode.singleSelect" 
+    name="inputWrapper"
+    ng-form>
+
+    <span 
+      class="input-error"   
+      ng-show="inputWrapper.dateInput.$error.pattern">
+        Please, set date in format "{{$ctrl.defaultDateFormat}}"
+    </span>
+    
+    <br/>
+
+    <input 
+      ng-model="dateInput"
+      ng-pattern="/^[0-9]{2}[\/]{1}[0-9]{2}[\/]{1}[0-9]{4}$/g"
+      name="dateInput" 
+      type="text" 
+      class="single-input"
+      placeholder={{$ctrl.defaultDateFormat}} 
+      ng-value="$ctrl.selectedDate.singleSelected" 
+      ng-click="$ctrl.showDatePickerBody()">
+
+  </div>
+  <div 
+    class="input-wrapper"
+    ng-if="$ctrl.selectionMode.rangeSelect" >
+
+      <input 
+        type="text" 
+        class="range-input"
+        placeholder={{$ctrl.defaultDateFormat}} 
+        ng-value="$ctrl.selectedDate.rangeFrom">
+      
+      <input 
+        type="text" 
+        class="range-input range-input-to"
+        placeholder={{$ctrl.defaultDateFormat}} 
+        ng-value="$ctrl.selectedDate.rangeTo">
+      
+    </div>
+
+  <button 
+    ng-click="$ctrl.showDatePickerBody()">
+
+    <img 
+      ng-if="$ctrl.openButton == 'icon'" 
+      class="dp-icon" 
+      src="assets/dp-icon.png">
+    <span 
+      ng-if="$ctrl.openButton !== 'icon'">
+      Select Date
+    </span>
+
+  </button>
+
+</div>

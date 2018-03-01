@@ -1,0 +1,32 @@
+<fieldset ng-repeat="contentItem in $ctrl.contentMenu track by $index">    
+    <button 
+        type="button" 
+        ng-click="contentItem.flag = !contentItem.flag">   
+        <img 
+            ng-if="contentItem.icon == ''" 
+            src="assets/img_accordion/default.png" 
+            alt="Icon must be here"/>
+        <img 
+            ng-if="contentItem.icon != ''" 
+            ng-src="assets/img_accordion/{{contentItem.icon}}" 
+            alt="Icon must be here"/>
+        {{contentItem.title}}
+    </button>
+    <div 
+        ng-class="{ 
+            show__content: contentItem.flag,
+            hide__content: !contentItem.flag
+                }" 
+        ng-show="contentItem.flag">
+        <ul ng-if="contentItem.contentLinks != null">
+            <li ng-repeat="contentLink in contentItem.contentLinks track by $index">
+                <a href="#">
+                    {{contentLink.name}}
+                </a>
+            </li>
+        </ul>
+        <p ng-if="contentItem.contentText != null">
+            {{contentItem.contentText}}
+        </p>
+    </div>
+</fieldset>

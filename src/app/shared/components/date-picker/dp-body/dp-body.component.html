@@ -1,0 +1,21 @@
+<div class="day-names-container">
+  <div 
+    class="day-names" 
+    ng-repeat="dayName in $ctrl.weekDayNames" 
+    ng-bind="dayName">
+  </div>
+</div>
+
+<div class="day-container">
+  <div 
+    class="day-item" 
+    ng-click="$ctrl.selectDay(day)"
+    ng-class="{'empty-days':!day,
+              'active-days':day, 
+              'today': $ctrl.todayCheck(day), 
+              'selected-date':$ctrl.currentSelected(day)}"
+    ng-repeat="day in $ctrl.daysArray track by $index">
+
+    <div ng-bind="day.date()"></div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.flex-container {
+    display: flex;
+}
+.flex-container > div {
+    margin: 10px;
+}
+.colerpalette {
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.canvas-container {
+    position: absolute;
+    z-index: 999;
+}

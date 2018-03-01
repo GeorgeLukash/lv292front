@@ -1,0 +1,22 @@
+<div class="components-container">
+    <h2>Color Picker</h2>
+    <div class="container-content">
+      <color-picker output-select="thisSelect=selectColor">
+      </color-picker>
+      <div>
+        <p>You selected:</p>
+        <p ng-style="{'border-bottom-color': thisSelect.hex}">HEX: {{thisSelect.hex}}</p>
+        <p ng-style="{'border-bottom-color': thisSelect.hex}">RGB: {{thisSelect.rgb}}</p>    
+    </div>
+        <pre>
+          <code>  
+    &lt;ita-color-picker 
+        output-select="thisSelect=selectColor"&gt; 
+    &lt;/ita-color-picker&gt;
+          </code>
+       </pre>
+    </div>
+    <div class="api-table" id="lower-api-table">
+        <itable table-data="$ctrl.getData()" text-extended="false"></itable>
+    </div>
+</div>
